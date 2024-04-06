@@ -3,16 +3,17 @@ import avatar from '../../assets/images/Mohan-muruge.jpg';
 import brainFlixLogo from '../../assets/logo/BrainFlix-logo.svg';
 import uploadIcon from '../../assets/icons/upload.svg';
 
+import './Header.scss';
+
 function Header () {
     return (
         <header className="header">
             <div>
                 <a href="/">
-                    <img className="header__logo-img" src={brainFlixLogo} alt='logo' />
-                    <h1 className="header__logo">BrainFlix</h1>
+                    <img className="header__logo" src={brainFlixLogo} alt='logo' />
                 </a>
             </div>
-            <div>
+            <div className='header__layout'>
                 <form>
                     <label htmlFor="search"></label>
                     <div className="header__search-container">
@@ -20,7 +21,6 @@ function Header () {
                         <input
                             type="text"
                             id="search"
-                            value={searchTerm}
                             placeholder="Search"
                             className="header__search-input"
                         />
