@@ -8,7 +8,6 @@ import "./styles/partials/globals.scss"
 function App() {
 
   const [selectedVideo, setSelectedVideo] = useState(videoData[0]); 
-    console.log(selectedVideo);
 
     function handleSelect(clickedId) {
      
@@ -34,7 +33,7 @@ function App() {
                 video={selectedVideo.video} 
                 title={selectedVideo.title}
                 channel={selectedVideo.channel}
-                timestamp={selectedVideo.timestamp.toLocaleString()}
+                timestamp={selectedVideo.timestamp}
                 views={selectedVideo.views}
                 likes={selectedVideo.likes}
                 description={selectedVideo.description}
