@@ -4,18 +4,27 @@
 .video-item {
     display: flex;
     margin-bottom: 1rem;
+    @include tablet {
+        margin-bottom: 1.5rem;
+    }
 
     &__info {
         display: flex;
         flex-direction: column;
         padding-left: 1rem;
         justify-content: space-between;
+        @include tablet {
+            padding-left: 1.5rem;
+        }
     }
 
     &__image {
-        width: 37%;
+        width: 6.67rem;
         border-radius: 4px;
         background-color: $mercury;
+        @include tablet {
+            width: 8rem;
+        }
     }
 
     &__title {
@@ -24,6 +33,11 @@
         color: $brainflix-black;
         font-weight: 600;
         margin: 0;
+        @include tablet {
+            font-size: 0.875rem;
+            font-weight: 700;
+            width: 12rem;
+        }
     }
 
     &__channel {
@@ -33,6 +47,9 @@
         font-weight: 500;
         line-height: 1.125rem;
         margin: 0;
+        @include tablet {
+            font-size: 14px;
+        }
 
     }
 }

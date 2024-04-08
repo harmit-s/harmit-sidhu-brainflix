@@ -6,6 +6,9 @@
     background-color: $white;
     display: flex;
     flex-direction: column;
+    @include tablet {
+        padding: 2.25rem 2.25rem .75rem 2.25rem; 
+    }
 
     &__title {
         font-family: 'Avenir';
@@ -14,11 +17,19 @@
         font-weight: 600;
         margin-bottom: .5rem;
         margin-top: .5rem;
+        @include tablet {
+            margin: 0;
+            font-size: .875rem;
+            padding-bottom: 2.25rem;
+        }
     }
 
     &__list {
         list-style-type: none;
         padding: 0;
         margin-bottom: 0;
+        @include tablet {
+            margin-top: 0;
+        }
     }
 }

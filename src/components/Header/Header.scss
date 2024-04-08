@@ -1,4 +1,5 @@
 @import '../../styles/partials/colors.scss';
+@import '../../styles/partials/mixins.scss';
 
 .header {
     display: flex;
@@ -6,11 +7,20 @@
     background-color: $white;
     padding: 1rem;
     align-items: center;
+    @include tablet {
+        flex-direction: row;
+        padding: 1rem 2.25rem;
+        align-items: center;
+    }
 
     &__logo {
         width: 7.5rem;
         height: 1.5625rem;
         margin-bottom: .8125rem;
+        @include tablet {
+            order: 1;
+            margin: .4rem 7rem 0 0;
+        }
     }
 
     &__avatar {
@@ -20,13 +30,19 @@
         object-fit: cover;
         object-position: center;
         margin-left: .88rem;
+        @include tablet {
+            width: 2.5rem;
+            height: 2.5rem;
+            order: 4;
+            margin:0;
+        }
     }
 
     &__button {
         font-size: .69rem;
         font-weight: 500;
         width: 100%;
-        height: 2.35rem;
+        height: 2.5rem;
         border-radius: 4px;
         background: $brainflix-blue;
         color: $white;
@@ -36,6 +52,16 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        &:hover {
+            background-color: $brainflix-darkblue;
+        }
+        @include tablet {
+            width: 9.375rem;
+            padding: 0 2rem;
+            margin: 0 1.5rem;
+            order: 3;
+            font-size: .75rem;
+        }
     }
 
     &__upload-icon {
@@ -59,16 +85,35 @@
         &::placeholder {
             color: $brainflix-black;
             font-size: 0.6875rem;
+            line-height: 1.25rem;
             font-weight: 500;
             font-family: 'Avenir';
             padding-left: 1.25rem;
             align-items: center;
-            
+        }
+        &:active {
+            border: 2px solid $brainflix-blue;
+        }
+        &:invalid {
+            border: 1px solid $error;
+        }
+        @include tablet {
+            height: 2.5rem;
+            width: 15rem;
+            padding: 1rem;
+            order: 2;
+            &::placeholder {
+                font-size: .75rem;
+            }
         }
     }
 
     &__layout {
         display: flex;
+        @include tablet {
+            display: contents;
+        }
+        
     }
 
     &__search-container {
