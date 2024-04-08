@@ -12,7 +12,9 @@
             background-color: $brainflix-darkblack;
             padding: 0 2.25rem;
         }
-
+        @include desktop {
+            padding: 0 13.7rem;
+        }
     }
 
     &__avatar {
@@ -33,6 +35,9 @@
         padding: 1rem 1rem 0 1rem;
         @include tablet {
         padding: 2.25rem 2.25rem 0 2.25rem;
+        }
+        @include desktop {
+            padding: 2.25rem 0 0 9rem;
         }
     }
 
@@ -68,6 +73,9 @@
             align-items: center;
             justify-content: space-between;
             border-bottom: 1.5px solid $mercury;
+            @include desktop {
+                padding-right: 1.5rem;
+            }
         }
     }
 
@@ -183,6 +191,10 @@
         @include tablet {
             padding-bottom: 1.5rem;
         }
+        @include desktop {
+            gap: 0;
+            justify-content: space-between;
+        }
     }
 
     &__form {
@@ -247,6 +259,9 @@
             padding: 0 2rem;
             margin: 0 0 0 1.5rem;
             height: 2.5rem;
+        }
+        @include desktop {
+            margin-right: 1.5rem;
         }
     }
 
@@ -330,7 +345,7 @@
             padding-bottom: 0;
         }
         @include desktop {
-            
+            width: 99%;
         }
     }
 
@@ -344,6 +359,9 @@
         @include tablet {
             font-size: .875rem;
             top: 1.65rem;
+        }
+        @include desktop {
+            right: 1.5rem;
         }
     }
 }

@@ -5,6 +5,7 @@ import likesIcon from '../../assets/icons/likes.svg'
 import videoPoster from '../../assets/images/Upload-video-preview.jpg'
 
 import './SelectedVideo.scss'
+import '../../App.scss'
 
 const SelectedVideo = ({ video, title, channel, timestamp, views, likes, description, comments, videoComments }) => {
 

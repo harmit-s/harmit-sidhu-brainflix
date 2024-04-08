@@ -5,7 +5,7 @@ import uploadIcon from '../../assets/icons/upload.svg';
 
 import './Header.scss';
 
-function Header () {
+function Header() {
     return (
         <header className="header">
             <div>

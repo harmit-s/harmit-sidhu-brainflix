@@ -9,6 +9,10 @@
     @include tablet {
         padding: 2.25rem 2.25rem .75rem 2.25rem; 
     }
+    @include desktop {
+        border-left: 1.5px solid $mercury;
+        padding: 2.25rem 7rem .75rem 1.5rem;
+    }
 
     &__title {
         font-family: 'Avenir';
