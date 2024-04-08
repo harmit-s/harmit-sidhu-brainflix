@@ -1,10 +1,17 @@
-function VideoItem({ id, name, changeVideo }) {
-    // we invoke the changePlant() function passed by prop and that originates from App.js and passed down to this child by way of props
-    // we DO NOT want to immediately invoke it though, so we have to pass it in an anonymous callback function
-    // this click will pass this specific id for whatever plant is clicked in the list
-    // because all these <li>s are coming from that .map() iteration, the click is 'mapped' to each indiviudal <li> and it's individual id
+import './VideoItem.scss'
 
-    return <li onClick={() => changeVideo(id)}>{name}</li>;
+function VideoItem({ id, title, channel, image, changeVideo }) {
+
+    return (<li onClick={() => changeVideo(id)}>
+        <div className='video-item'>
+            <img src={image} alt={title} className="video-item__image" />
+            <div className="video-item__info">
+                <p className="video-item__title">{title}</p>
+                <p className="video-item__channel">{channel}</p>
+            </div>
+        </div>
+    </li>
+    );
 }
 
 export default VideoItem;

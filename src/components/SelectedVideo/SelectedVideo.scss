@@ -4,6 +4,7 @@
 .selected-video {
     display: flex;
     flex-direction: column;
+    background-color: $white;
 
     &__video {
         width: 100%;
@@ -20,7 +21,7 @@
     }
 
     &__container {
-        padding: 1rem;
+        padding: 1rem 1rem 0 1rem;
     }
 
     &__title {
@@ -36,21 +37,21 @@
 
     &__layout {
         display: flex;
-        gap: 2rem;
+        gap: 2.2rem;
     }
 
     &__channel {
         margin:0;
         color: $brainflix-black;
         font-weight: 600;
-        font-size: .86rem;
+        font-size: .84rem;
         line-height: 1.125rem;
     }
 
     &__timestamp {
         color: $silver;
         font-weight: 500;
-        font-size: .875rem;
+        font-size: .8125rem;
         line-height: 1.125rem;
         margin-top: 1rem;
     }
@@ -59,13 +60,13 @@
         margin:0;
         color: $silver;
         font-weight: 500;
-        font-size: .875rem;
+        font-size: .8125rem;
         line-height: 1.125rem;
     }
 
     &__layout-2 {
         display: flex;
-        gap: 6.4rem;
+        gap: 6.65rem;
     }
 
     &__views-layout {
@@ -85,7 +86,7 @@
     &__likes {
         color: $silver;
         font-weight: 500;
-        font-size: .875rem;
+        font-size: .8125rem;
         line-height: 1.125rem;
     }
 
@@ -100,7 +101,7 @@
     }
 
     &__comments {
-        font-size: .86rem;
+        font-size: .82rem;
         font-family: 'Avenir';
         font-weight: 600;
         margin: 1rem 0;
@@ -114,7 +115,7 @@
 
     &__subtitle {
         font-family: 'Avenir';
-        font-size: .8125rem;
+        font-size: .8rem;
         color: $silver;
         font-weight: 600;
         margin-bottom: .25rem;
@@ -139,7 +140,7 @@
         font-size: .75rem;
         font-weight: 500;
         width: 100%;
-        height: 2.5rem;
+        height: 2.25rem;
         border-radius: 4px;
         background: $brainflix-blue;
         color: $white;
@@ -202,7 +203,7 @@
     }
 
     &__comment-title {
-        font-size: .88rem;
+        font-size: .8125rem;
         font-family: 'Avenir';
         color: $brainflix-black;
         font-weight: 600;
@@ -216,7 +217,7 @@
     }
 
     &__comment-para {
-        font-size: .8225rem;
+        font-size: .8125rem;
         font-family: 'Avenir';
         color: $brainflix-black;
         font-weight: 500;

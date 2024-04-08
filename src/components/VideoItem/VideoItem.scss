@@ -1,0 +1,38 @@
+@import '../../styles/partials/colors.scss';
+@import '../../styles/partials/mixins.scss';
+
+.video-item {
+    display: flex;
+    margin-bottom: 1rem;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        justify-content: space-between;
+    }
+
+    &__image {
+        width: 37%;
+        border-radius: 4px;
+        background-color: $mercury;
+    }
+
+    &__title {
+        font-size: .8rem;
+        font-family: 'Avenir';
+        color: $brainflix-black;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    &__channel {
+        font-size: .7825rem;
+        font-family: 'Avenir';
+        color: $brainflix-black;
+        font-weight: 500;
+        line-height: 1.125rem;
+        margin: 0;
+
+    }
+}

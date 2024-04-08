@@ -1,0 +1,24 @@
+@import '../../styles/partials/colors.scss';
+@import '../../styles/partials/mixins.scss';
+
+.next-videos {
+    padding: 0 1rem 1rem 1rem;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-family: 'Avenir';
+        font-size: .8rem;
+        color: $silver;
+        font-weight: 600;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0;
+    }
+}

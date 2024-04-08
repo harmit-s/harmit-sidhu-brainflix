@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header/Header";
 import SelectedVideo from "./components/SelectedVideo/SelectedVideo";
+import NextVideo from "./components/NextVideos/NextVideo";
 import videoData from "./data/video-details.json"
 
 import "./styles/partials/globals.scss"
@@ -40,6 +41,7 @@ function App() {
                 comments={selectedVideo.comments.length}
                 videoComments={selectedVideo.comments}
             />
+      <NextVideo videos={filteredVideo} changeVideo={handleSelect} />
 
     </div>
   );
