@@ -1,17 +1,20 @@
-import './VideoItem.scss'
+import { Link } from "react-router-dom";
+import "./VideoItem.scss";
 
-function VideoItem({ id, title, channel, image, changeVideo }) {
-
-    return (<li onClick={() => changeVideo(id)}>
-        <section className='video-item'>
-            <img src={image} alt={title} className="video-item__image" />
-            <div className="video-item__info">
-                <p className="video-item__title">{title}</p>
-                <p className="video-item__channel">{channel}</p>
-            </div>
+function VideoItem({ video }) {
+  return (
+    <li>
+      <Link to={`/videos/${video.id}`}>
+        <section className="video-item">
+          <img src={video.image} alt={video.title} className="video-item__image" />
+          <div className="video-item__info">
+            <p className="video-item__title">{video.title}</p>
+            <p className="video-item__channel">{video.channel}</p>
+          </div>
         </section>
+      </Link>
     </li>
-    );
+  );
 }
 
 export default VideoItem;
