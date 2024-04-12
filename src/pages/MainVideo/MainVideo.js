@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import VideoList from "../../components/VideoList/VideoList";
 
@@ -35,8 +35,10 @@ const MainVideoPage = () => {
 
   return (
     <div className="main-video-page">
+        {mainVideo && (
+            <div className="main-video">
       <video className="hero" poster={mainVideo.image} controls>
-        {video}
+        <source src={mainVideo.video} />
       </video>
       <SelectedVideo
         title={mainVideo.title}
@@ -48,6 +50,9 @@ const MainVideoPage = () => {
         comments={mainVideo.comments}
         videoComments={mainVideo.videoComments}
       />
+      </div>
+        )}
+        
       <VideoList videos={videoList} />
     </div>
   );

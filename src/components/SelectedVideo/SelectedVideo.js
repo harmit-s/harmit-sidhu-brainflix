@@ -2,7 +2,7 @@ import commentIcon from '../../assets/icons/add_comment.svg'
 import avatar from '../../assets/images/Mohan-muruge.jpg'
 import viewsIcon from '../../assets/icons/views.svg'
 import likesIcon from '../../assets/icons/likes.svg'
-import { useState, useParams } from "react";
+import { useState, useParams, useEffect } from "react";
 import axios from 'axios';
 
 import './SelectedVideo.scss'

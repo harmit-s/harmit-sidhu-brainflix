@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import MainVideoPage from "./pages/MainVideo/MainVideo"
 import SelectedVideo from "./components/SelectedVideo/SelectedVideo";
-// import VideoUploadPage from "./pages/VideoDetails/VideoDetails"
+import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
 import VideoList from "./components/VideoList/VideoList";
 
 import "./styles/partials/globals.scss";
