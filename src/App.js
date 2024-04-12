@@ -10,23 +10,6 @@ import "./styles/partials/globals.scss";
 import "./App.scss";
 
 function App() {
-  const [selectedVideo, setSelectedVideo] = useState(videoData[0]);
-
-  function handleSelect(clickedId) {
-    const foundVideo = videoData.find((video) => {
-      if (clickedId === video.id) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-
-    setSelectedVideo(foundVideo);
-  }
-
-  const filteredVideo = videoData.filter((video) => {
-    return video.id !== selectedVideo.id;
-  });
 
   return (
     <BrowserRouter>
@@ -38,11 +21,7 @@ function App() {
           <Route path="/videos/:videoId" element={<SelectedVideo />} />
           <Route path="/upload" element={<VideoUploadPage />} />
         </Routes>
-        <NextVideo
-          className="nav"
-          videos={filteredVideo}
-          changeVideo={handleSelect}
-        />
+        <NextVideo className="nav" />
       </div>
     </BrowserRouter>
   );
