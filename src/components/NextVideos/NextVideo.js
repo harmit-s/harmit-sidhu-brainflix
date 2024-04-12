@@ -18,7 +18,7 @@ function NextVideo({ videos, changeVideo }) {
                             id={video.id}
                             image={video.image}
                             channel={video.channel}
-                            changeVideo={changeVideo}
+                            onClick={() => changeVideo(video.id)}
                         />
                     );
                 })}

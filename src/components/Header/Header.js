@@ -13,7 +13,7 @@ function Header() {
                     <img className="header__logo" src={brainFlixLogo} alt='logo' />
                 </a>
             </div>
-            <div className='header__layout'>
+            <section className='header__layout'>
                 <form>
                     <label htmlFor="search"></label>
                     <div className="header__search-container">
@@ -27,7 +27,7 @@ function Header() {
                     </div>
                 </form>
                 <img src={avatar} className='header__avatar' alt='avatar' />
-            </div>
+            </section>
             <button className='header__button'> <img src={uploadIcon} alt='upload icon' className='header__upload-icon' />UPLOAD</button>
         </header>
     )
