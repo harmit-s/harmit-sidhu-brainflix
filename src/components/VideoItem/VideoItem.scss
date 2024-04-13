@@ -8,6 +8,10 @@
         margin-bottom: 1.5rem;
     }
 
+    &__link {
+        text-decoration: none;
+    }
+
     &__info {
         display: flex;
         flex-direction: column;

@@ -14,7 +14,7 @@ const MainVideoPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-      
+
         const mainVideoResponse = await axios.get(
           `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId}?api_key=f5a503e0-f571-43cd-9ec6-b29be74dce24`
         );
@@ -35,10 +35,15 @@ const MainVideoPage = () => {
     fetchData();
   }, [videoId]);
 
+
+
   return (
     <div className="main-video-page">
-      {mainVideo && <SelectedVideo video={mainVideo} />}
-      <VideoList videos={videoList} />
+      <video className="hero" poster={mainVideo.image} controls><source src={mainVideo.video} /></video>
+      <div className="main-video-page__layout">
+        {mainVideo && <SelectedVideo video={mainVideo} />}
+        <VideoList videos={videoList} />
+      </div>
     </div>
   );
 };

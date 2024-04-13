@@ -11,11 +11,10 @@ const SelectedVideo = ({ video }) => {
       return <div>Loading...</div>;
     }
   
-    const { title, channel, views, timestamp, likes, description, comments, image } = video;
+    const { title, channel, views, timestamp, likes, description, comments } = video;
 
     return (
         <section className="selected-video">
-            <video className="hero" poster={image} controls><source src={video} /></video>
             <div className="selected-video__container">
                 <h1 className="selected-video__title">{title}</h1>
                 <div className="selected-video__tablet-view">

@@ -11,7 +11,7 @@
     }
     @include desktop {
         border-left: 1.5px solid $mercury;
-        padding: 2.25rem 7rem .75rem 1.5rem;
+        padding: 2.25rem 6rem .75rem 1.5rem;
     }
 
     &__title {
@@ -19,21 +19,20 @@
         font-size: .8rem;
         color: $silver;
         font-weight: 600;
-        margin-bottom: .5rem;
-        margin-top: .5rem;
+        margin: 1rem 0;
         @include tablet {
             margin: 0;
             font-size: .875rem;
             padding-bottom: 2.25rem;
+        }
+        @include desktop {
+            padding-bottom: 1.5rem;
         }
     }
 
     &__list {
         list-style-type: none;
         padding: 0;
-        margin-bottom: 0;
-        @include tablet {
-            margin-top: 0;
-        }
+        margin: 0;
     }
 }
