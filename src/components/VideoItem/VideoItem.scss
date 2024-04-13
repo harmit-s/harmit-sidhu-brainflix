@@ -27,12 +27,13 @@
         }
     }
 
-    &__title {
+    &__title  {
         font-size: .8rem;
         font-family: 'Avenir';
         color: $brainflix-black;
         font-weight: 600;
         margin: 0;
+        text-decoration: none;
         @include tablet {
             font-size: 0.875rem;
             font-weight: 700;

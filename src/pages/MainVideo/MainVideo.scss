@@ -15,3 +15,368 @@
     }
 }
 
+
+.selected-video {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+
+    &__video {
+        width: 100%;
+        @include tablet {
+            background-color: $brainflix-darkblack;
+            padding: 0 2.25rem;
+        }
+        @include desktop {
+            padding: 0 13.7rem;
+        }
+    }
+
+    &__avatar {
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        object-fit: cover;
+        object-position: center;
+        margin-top: 1rem;
+        @include tablet {
+            width: 2.5rem;
+            height: 2.5rem;
+            }
+        
+    }
+
+    &__container {
+        padding: 1rem 1rem 0 1rem;
+        @include tablet {
+        padding: 2.25rem 2.25rem 0 2.25rem;
+        }
+        @include desktop {
+            padding: 2.25rem 0 0 9rem;
+        }
+    }
+
+    &__title {
+        font-family: 'Avenir';
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        margin-top: .5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1.5px solid $mercury;
+        color: $brainflix-black;
+        @include tablet {
+            margin: 0;
+            font-size: 2.0625rem;
+            line-height: 2.75rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+
+    &__layout {
+        display: flex;
+        gap: 2.2rem;
+        @include tablet {
+            display: contents;
+        }
+    }
+
+    &__tablet-view {
+        @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1.5px solid $mercury;
+            @include desktop {
+                padding-right: 1.5rem;
+            }
+        }
+    }
+
+    &__channel {
+        margin:0;
+        color: $brainflix-black;
+        font-weight: 600;
+        font-size: .84rem;
+        line-height: 1.125rem;
+        @include tablet {
+            order: 1;
+            font-size: .875rem;
+            font-weight: 700;
+            padding-top: .4375rem;
+        }
+    }
+
+    &__timestamp {
+        color: $silver;
+        font-weight: 500;
+        font-size: .8125rem;
+        line-height: 1.125rem;
+        margin-top: 1rem;
+        @include tablet {
+            order: 2;
+            font-size: .875rem;
+            margin-right: 17rem;
+            margin-bottom: .375rem;
+        }
+    }
+
+    &__views {
+        margin:0;
+        color: $silver;
+        font-weight: 500;
+        font-size: .8125rem;
+        line-height: 1.125rem;
+    }
+
+    &__layout-2 {
+        display: flex;
+        gap: 6.65rem;
+        @include tablet {
+            display: contents;
+        }
+    }
+
+    &__views-layout {
+        display: flex;
+        gap: .4rem;
+        align-items: center;
+        justify-content: center;
+        @include tablet {
+            order: 3;
+            font-size: .875rem;
+        }
+    }
+
+    &__likes-layout {
+        display: flex;
+        gap: .4rem;
+        align-items: center;
+        justify-content: center;
+        @include tablet {
+            order: 4;
+            font-size: .875rem;
+        }
+    }
+
+    &__likes {
+        color: $silver;
+        font-weight: 500;
+        font-size: .8125rem;
+        line-height: 1.125rem;
+        @include tablet {
+            margin-bottom: .25rem;
+            padding-bottom: .375rem;
+        }
+    }
+
+    &__description {
+        border-top: 1.5px solid $mercury;
+        margin: 0;
+        padding-top: 1rem;
+        font-family: 'Avenir';
+        font-size: .8125rem;
+        font-weight: 500;
+        color: $brainflix-black;
+        @include tablet {
+            font-size: .875rem;
+            padding-top: 2rem;
+            width: 95%;
+            border-top: none;
+        }
+    }
+
+    &__comments {
+        font-size: .82rem;
+        font-family: 'Avenir';
+        font-weight: 600;
+        margin: 1rem 0;
+        @include tablet {
+            margin: 1.5rem 0;
+            font-size: .875rem;
+            font-weight: 700;
+        }
+    }
+
+    &__layout-avatar {
+        display: flex;
+        gap: 1.5rem;
+        border-bottom: 1.5px solid $mercury;
+        @include tablet {
+            padding-bottom: 1.5rem;
+        }
+        @include desktop {
+            gap: 0;
+            justify-content: space-between;
+        }
+    }
+
+    &__form {
+        @include tablet {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    &__form-box {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            }
+    }
+
+    &__subtitle {
+        font-family: 'Avenir';
+        font-size: .8rem;
+        color: $silver;
+        font-weight: 600;
+        margin-bottom: .25rem;
+    }
+
+    &__comment-input {
+        width: 100%;
+        height: 6.5rem;
+        background-color: $alabaster;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        padding: .75rem;
+        resize: none; 
+        overflow: hidden;
+        &::placeholder {
+            font-size: .875rem;
+            font-weight: 500;
+            font-family: 'Avenir';
+            color: $brainflix-black;
+        } 
+        @include tablet {
+            width: 29rem;
+            height: 2.5rem;
+            }
+    }
+
+    &__button {
+        font-size: .75rem;
+        font-weight: 500;
+        width: 100%;
+        height: 2.25rem;
+        border-radius: 4px;
+        background: $brainflix-blue;
+        color: $white;
+        border: none;
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include tablet {
+            width: 9.375rem;
+            padding: 0 2rem;
+            margin: 0 0 0 1.5rem;
+            height: 2.5rem;
+        }
+        @include desktop {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__icon {
+        height: 1.15rem;
+        position: absolute;
+        top: 53%;
+        left: 10px;
+        transform: translateY(-50%);
+    }
+
+    &__comment-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 0;
+        @include tablet {
+            margin: 0;
+        }
+        @include desktop {
+            
+        }
+    }
+
+    &__comment-item {
+        position: relative;
+        display: flex;
+        list-style-type: none;
+        border-bottom: 1.5px solid $mercury;
+        margin-bottom: 1rem;
+        @include tablet {
+            padding: 1.5rem 0;
+            border-bottom: 1.5px solid $mercury;
+            margin-bottom: 0;
+        }
+    }
+
+    &__com-avatar {
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        margin-right: 1rem;
+        background: $mercury;
+        @include tablet {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__com-layout {
+        flex: 1;
+    }
+
+    &__comment-title {
+        font-size: .8125rem;
+        font-family: 'Avenir';
+        color: $brainflix-black;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        @include tablet {
+            line-height: 1.375rem ;
+            font-size: .875rem;
+            padding-bottom: .25rem;
+        }
+        @include desktop {
+            
+        }
+    }
+
+    &__comment-para {
+        font-size: .8125rem;
+        font-family: 'Avenir';
+        color: $brainflix-black;
+        font-weight: 500;
+        line-height: 1.125rem;
+        padding-bottom: 1rem;
+        @include tablet {
+            line-height: 1.375rem;
+            font-size: .875rem;
+            padding-bottom: 0;
+        }
+        @include desktop {
+            width: 99%;
+        }
+    }
+
+    &__comment-timestamp {
+        font-size: .8225rem;
+        font-family: 'Avenir';
+        color: $silver;
+        position: absolute;
+        top: 0;
+        right:0;
+        @include tablet {
+            font-size: .875rem;
+            top: 1.65rem;
+        }
+        @include desktop {
+            right: 1.5rem;
+        }
+    }
+}
