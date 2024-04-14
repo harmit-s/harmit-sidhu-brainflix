@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import searchIcon from '../../assets/icons/search.svg';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
 import brainFlixLogo from '../../assets/logo/BrainFlix-logo.svg';
@@ -9,9 +10,9 @@ function Header() {
     return (
         <header className="header">
             <div>
-                <a href="/">
+                <Navigate to="/" className="header__button-link">
                     <img className="header__logo" src={brainFlixLogo} alt='logo' />
-                </a>
+                </Navigate>
             </div>
             <section className='header__layout'>
                 <form>
@@ -28,7 +29,12 @@ function Header() {
                 </form>
                 <img src={avatar} className='header__avatar' alt='avatar' />
             </section>
-            <button className='header__button'> <img src={uploadIcon} alt='upload icon' className='header__upload-icon' />UPLOAD</button>
+            <Navigate to="/upload" className="header__button-link">
+                <button className='header__button'>
+                    <img src={uploadIcon} alt='upload icon' className='header__upload-icon' />
+                    UPLOAD
+                </button>
+            </Navigate>
         </header>
     )
 }
