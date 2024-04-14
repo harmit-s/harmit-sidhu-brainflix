@@ -1,4 +1,4 @@
-import { Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import searchIcon from '../../assets/icons/search.svg';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
 import brainFlixLogo from '../../assets/logo/BrainFlix-logo.svg';
@@ -7,9 +7,12 @@ import uploadIcon from '../../assets/icons/upload.svg';
 import './Header.scss';
 
 function Header() {
+    const navigate = useNavigate();
     return (
         <header className="header">
-            <img className="header__logo" src={brainFlixLogo} alt='logo' onClick={() => Navigate('/upload')} />
+            <Link to="/" className="header__logo-link">
+                <img className="header__logo" src={brainFlixLogo} alt='logo' />
+            </Link>
             <section className='header__layout'>
                 <form>
                     <label htmlFor="search"></label>
@@ -25,7 +28,7 @@ function Header() {
                 </form>
                 <img src={avatar} className='header__avatar' alt='avatar' />
             </section>
-            <button className='header__button' onClick={() => Navigate('/upload')}>
+            <button className='header__button' onClick={() => navigate('/upload')}>
                 <img src={uploadIcon} alt='upload icon' className='header__upload-icon' />
                 UPLOAD
             </button>

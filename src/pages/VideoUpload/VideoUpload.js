@@ -27,33 +27,39 @@ function VideoUploadPage() {
     return (
         <section className='video-upload'>
             <h1 className='video-upload__title'>Upload Video</h1>
-            <form className='video-upload__form' onSubmit={handleSubmit}>
-                <label className='video-upload__label'>VIDEO THUMBNAIL</label>
-                <img src={thumbnail} alt='thumbnail' className="video-upload__image" />
-                <label className='video-upload__label'>TITLE YOUR VIDEO</label>
-                <input
-                    type="text"
-                    name="title"
-                    placeholder="Add a title to your video"
-                    className='video-upload__title-input'
-                />
-                <label className='video-upload__label'>ADD A VIDEO DESCRIPTION</label>
-                <textarea
-                    type="text"
-                    name="description"
-                    placeholder="Add a description to your video"
-                    className='video-upload__description-input'
-                ></textarea>
+            <form className='video-upload__form-sub' onSubmit={handleSubmit}>
+                <div className="video-upload__form">
+                <div className="video-upload__layout">
+                    <label className='video-upload__label-one'>VIDEO THUMBNAIL</label>
+                    <img src={thumbnail} alt='thumbnail' className="video-upload__image" />
+                </div>
+                <div className="video-upload__layout-2">
+                    <label className='video-upload__label'>TITLE YOUR VIDEO</label>
+                    <input
+                        type="text"
+                        name="title"
+                        placeholder="Add a title to your video"
+                        className='video-upload__title-input'
+                    />
+                    <label className='video-upload__label'>ADD A VIDEO DESCRIPTION</label>
+                    <textarea
+                        type="text"
+                        name="description"
+                        placeholder="Add a description to your video"
+                        className='video-upload__description-input'
+                    ></textarea>
+                </div>
+                </div>
+                <div className="video-upload__buttons">
+                    <button type="submit" className='video-upload__button'>
+                        <img src={publishIcon} alt='publish icon' className='video-upload__publish-icon' />
+                        PUBLISH
+                    </button>
+                    <button className='video-upload__button-two' onClick={() => navigate("/")}>
+                        CANCEL
+                    </button>
+                </div>
             </form>
-            <div className="video-upload__buttons">
-                <button type="submit" className='video-upload__button'>
-                    <img src={publishIcon} alt='publish icon' className='video-upload__publish-icon' />
-                    PUBLISH
-                </button>
-                <button className='video-upload__button-two' onClick={() => navigate("/")}>
-                    CANCEL
-                </button>
-            </div>
         </section>
     );
 }

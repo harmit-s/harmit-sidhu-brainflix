@@ -10,6 +10,9 @@
         padding: 2rem 2.25rem 1.5rem 2.25rem;
         border-top: 2px solid $mercury;
     }
+    @include desktop {
+        padding: 2rem 9rem 1.5rem 9rem;
+    }
 
     &__title {
         font-family: 'Avenir';
@@ -26,6 +29,22 @@
         }
     }
 
+    &__label-one {
+        font-family: 'Avenir';
+        font-size: .7rem;
+        color: $silver;
+        font-weight: 600;
+        @include tablet {
+            font-size: .75rem;
+            display: flex;
+        }
+        @include desktop {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
     &__label {
         font-family: 'Avenir';
         font-size: .7rem;
@@ -34,6 +53,9 @@
         @include tablet {
             font-size: .75rem;
             display: flex;
+        }
+        @include desktop {
+            display: inline-block;
         }
     }
 
@@ -45,6 +67,10 @@
         @include tablet {
             width: 55%;
             margin-top: .3rem;
+        }
+        @include desktop {
+            width: 30%;
+            margin: 1.2rem 1.5rem 2rem 0;
         }
     }
 
@@ -74,6 +100,10 @@
         @include tablet {
             margin: .2rem 0 1.3rem 0;
         }
+        @include desktop {
+            width: 100%;
+            margin-bottom: .97rem;
+        }
     }
 
     &__description-input {
@@ -95,6 +125,10 @@
         }
         @include tablet {
             margin: .2rem 0 1.3rem 0;
+        }
+        @include desktop {
+            width: 100%;
+            margin-bottom: 0;
         }
     }
 
@@ -158,5 +192,24 @@
         top: 50%;
         transform: translateY(-50%);
         left: 10px;
+    }
+
+    &__form {
+        @include desktop {
+            display: flex;
+            position: relative;
+        }
+    }
+
+    &__layout {
+        @include desktop {
+            display: contents;
+        }
+    }
+
+    &__layout-2 {
+        @include desktop {
+            width: 100%;
+        }
     }
 }
