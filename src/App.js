@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import MainVideoPage from "./pages/MainVideo/MainVideo"
-import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
+import VideoUploadPage from "./pages/VideoUpload/VideoUpload";
 
 import "./styles/partials/globals.scss";
 import "./App.scss";

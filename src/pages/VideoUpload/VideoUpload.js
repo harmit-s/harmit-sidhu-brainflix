@@ -1,21 +1,19 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import thumbnail from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/icons/publish.svg';
 
-import './VideoUploadPage.scss';
+import './VideoUpload.scss';
 
 function VideoUploadPage() {
     const navigate = useNavigate();
-    const [formData, setFormData] = useState({
-        title: "",
-        description: ""
-    });
-
+    
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const { title, description } = formData;
+        const form = event.target;
+        const title = form.title.value;
+        const description = form.description.value;
+
         if (title === "" || description === "") {
             alert("You must fill out all fields");
             return;
@@ -24,11 +22,6 @@ function VideoUploadPage() {
         alert("Video Uploaded");
 
         navigate("/");
-    };
-
-    const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setFormData({ ...formData, [name]: value });
     };
 
     return (
@@ -43,24 +36,20 @@ function VideoUploadPage() {
                     name="title"
                     placeholder="Add a title to your video"
                     className='video-upload__title-input'
-                    value={formData.title}
-                    onChange={handleInputChange}
                 />
                 <label className='video-upload__label'>ADD A VIDEO DESCRIPTION</label>
-                <input
+                <textarea
                     type="text"
                     name="description"
                     placeholder="Add a description to your video"
                     className='video-upload__description-input'
-                    value={formData.description}
-                    onChange={handleInputChange}
-                />
-                <button type="submit" className='header__button'>
+                ></textarea>
+                <button type="submit" className='video-upload__button'>
                     <img src={publishIcon} alt='publish icon' className='video-upload__publish-icon' />
                     PUBLISH
                 </button>
             </form>
-            <button className='header__button-two' onClick={() => navigate("/")}>
+            <button className='video-upload__button-two' onClick={() => navigate("/")}>
                 CANCEL
             </button>
         </section>

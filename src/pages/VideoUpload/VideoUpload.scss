@@ -1,0 +1,123 @@
+@import '../../styles/partials/colors.scss';
+@import '../../styles/partials/mixins.scss';
+
+.video-upload {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 1.5px solid $mercury;
+
+    &__title {
+        font-family: 'Avenir';
+        font-size: 1.35rem;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+        color: $brainflix-black;
+    }
+
+    &__label {
+        font-family: 'Avenir';
+        font-size: .7rem;
+        color: $silver;
+        font-weight: 600;
+    }
+
+    &__image{
+        width: 100%;
+        border-radius: 4px;
+        background-color: $mercury;
+        margin-bottom: 1rem;
+    }
+
+    &__title-input {
+        height: 2.25rem;
+        width: 100%;
+        border-radius: 4px;
+        padding: .75rem;
+        border: 1px solid $mercury;
+        background-color: $alabaster;
+        margin: .1rem 0 1rem 0;
+
+        &::placeholder {
+            color: $brainflix-black;
+            font-size: .75rem;
+            line-height: 1.25rem;
+            font-weight: 500;
+            font-family: 'Avenir';
+            align-items: center;
+        }
+        &:active {
+            border: 2px solid $brainflix-blue;
+        }
+        &:invalid {
+            border: 1px solid $error;
+        }
+    }
+
+    &__description-input {
+        width: 100%;
+        height: 5rem;
+        background-color: $alabaster;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        padding: .75rem;
+        resize: none; 
+        overflow: hidden;
+        margin-top: .1rem;
+        margin-bottom: 1rem;
+        &::placeholder {
+            font-size: .75rem;
+            font-weight: 500;
+            font-family: 'Avenir';
+            color: $brainflix-black;
+        }
+    }
+
+    &__button {
+        font-size: .69rem;
+        font-weight: 500;
+        width: 100%;
+        height: 2.3rem;
+        border-radius: 4px;
+        background: $brainflix-blue;
+        color: $white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 2rem;
+        &:hover {
+            background-color: $brainflix-darkblue;
+        }
+        @include tablet {
+            width: 9.375rem;
+            padding: 0 2rem;
+            margin: 0 1.5rem;
+            order: 3;
+            font-size: .75rem;
+        }
+        @include desktop {
+            margin-right: 2.25rem;
+            margin-left: 1.5rem;
+        }
+    }
+
+    &__button-two {
+        color: $brainflix-blue;
+        border: none;
+        background-color: $white;
+        font-size: 0.69rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    &__publish-icon {
+        height: 1.3rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+    }
+}

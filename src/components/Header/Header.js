@@ -9,11 +9,7 @@ import './Header.scss';
 function Header() {
     return (
         <header className="header">
-            <div>
-                <Navigate to="/" className="header__button-link">
-                    <img className="header__logo" src={brainFlixLogo} alt='logo' />
-                </Navigate>
-            </div>
+            <img className="header__logo" src={brainFlixLogo} alt='logo' onClick={() => Navigate('/upload')} />
             <section className='header__layout'>
                 <form>
                     <label htmlFor="search"></label>
@@ -29,12 +25,10 @@ function Header() {
                 </form>
                 <img src={avatar} className='header__avatar' alt='avatar' />
             </section>
-            <Navigate to="/upload" className="header__button-link">
-                <button className='header__button'>
-                    <img src={uploadIcon} alt='upload icon' className='header__upload-icon' />
-                    UPLOAD
-                </button>
-            </Navigate>
+            <button className='header__button' onClick={() => Navigate('/upload')}>
+                <img src={uploadIcon} alt='upload icon' className='header__upload-icon' />
+                UPLOAD
+            </button>
         </header>
     )
 }
