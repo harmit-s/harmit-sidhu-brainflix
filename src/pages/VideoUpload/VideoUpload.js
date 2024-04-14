@@ -6,7 +6,7 @@ import './VideoUpload.scss';
 
 function VideoUploadPage() {
     const navigate = useNavigate();
-    
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -44,14 +44,16 @@ function VideoUploadPage() {
                     placeholder="Add a description to your video"
                     className='video-upload__description-input'
                 ></textarea>
+            </form>
+            <div className="video-upload__buttons">
                 <button type="submit" className='video-upload__button'>
                     <img src={publishIcon} alt='publish icon' className='video-upload__publish-icon' />
                     PUBLISH
                 </button>
-            </form>
-            <button className='video-upload__button-two' onClick={() => navigate("/")}>
-                CANCEL
-            </button>
+                <button className='video-upload__button-two' onClick={() => navigate("/")}>
+                    CANCEL
+                </button>
+            </div>
         </section>
     );
 }

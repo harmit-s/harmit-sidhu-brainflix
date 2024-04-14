@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
     border-top: 1.5px solid $mercury;
+    @include tablet {
+        padding: 2rem 2.25rem 1.5rem 2.25rem;
+        border-top: 2px solid $mercury;
+    }
 
     &__title {
         font-family: 'Avenir';
@@ -13,6 +17,13 @@
         margin-top: .5rem;
         margin-bottom: 1rem;
         color: $brainflix-black;
+        @include tablet {
+            margin-top: .25rem;
+            font-size: 2.0625rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid $mercury;
+        }
     }
 
     &__label {
@@ -20,6 +31,10 @@
         font-size: .7rem;
         color: $silver;
         font-weight: 600;
+        @include tablet {
+            font-size: .75rem;
+            display: flex;
+        }
     }
 
     &__image{
@@ -27,6 +42,10 @@
         border-radius: 4px;
         background-color: $mercury;
         margin-bottom: 1rem;
+        @include tablet {
+            width: 55%;
+            margin-top: .3rem;
+        }
     }
 
     &__title-input {
@@ -52,6 +71,9 @@
         &:invalid {
             border: 1px solid $error;
         }
+        @include tablet {
+            margin: .2rem 0 1.3rem 0;
+        }
     }
 
     &__description-input {
@@ -70,6 +92,18 @@
             font-weight: 500;
             font-family: 'Avenir';
             color: $brainflix-black;
+        }
+        @include tablet {
+            margin: .2rem 0 1.3rem 0;
+        }
+    }
+
+    &__buttons {
+        @include tablet {
+            display: flex;
+            justify-content: right;
+            border-top: 2px solid $mercury;
+            padding-top: 1.5rem;
         }
     }
 
@@ -91,15 +125,14 @@
             background-color: $brainflix-darkblue;
         }
         @include tablet {
-            width: 9.375rem;
+            width: 10rem;
             padding: 0 2rem;
-            margin: 0 1.5rem;
-            order: 3;
+            margin: 0;
             font-size: .75rem;
+            order: 2;
         }
         @include desktop {
-            margin-right: 2.25rem;
-            margin-left: 1.5rem;
+            
         }
     }
 
@@ -111,6 +144,12 @@
         font-weight: 600;
         margin-bottom: 1rem;
         position: relative;
+        @include tablet {
+            order: 1;
+            margin-right: 4rem;
+            margin-top: .7rem;
+            font-size: .75rem;
+        }
     }
 
     &__publish-icon {
