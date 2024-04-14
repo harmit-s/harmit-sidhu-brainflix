@@ -48,7 +48,7 @@
     }
 
     &__title {
-        font-family: 'Avenir';
+        font-family: 'Avenir', sans-serif, open;
         font-size: 1.5rem;
         line-height: 2rem;
         font-weight: 700;
@@ -166,7 +166,7 @@
         border-top: 1.5px solid $mercury;
         margin: 0;
         padding-top: 1rem;
-        font-family: 'Avenir';
+        font-family: 'Avenir', sans-serif, open;
         font-size: .8125rem;
         font-weight: 500;
         color: $brainflix-black;
@@ -184,7 +184,7 @@
 
     &__comments {
         font-size: .82rem;
-        font-family: 'Avenir';
+        font-family: 'Avenir', sans-serif, open;
         font-weight: 600;
         margin: 1rem 0;
         @include tablet {
@@ -223,7 +223,7 @@
     }
 
     &__subtitle {
-        font-family: 'Avenir';
+        font-family: 'Avenir', sans-serif, open;
         font-size: .8rem;
         color: $silver;
         font-weight: 600;
@@ -242,7 +242,7 @@
         &::placeholder {
             font-size: .875rem;
             font-weight: 500;
-            font-family: 'Avenir';
+            font-family: 'Avenir', sans-serif, open;
             color: $brainflix-black;
         } 
         @include tablet {
@@ -337,7 +337,7 @@
 
     &__comment-title {
         font-size: .8125rem;
-        font-family: 'Avenir';
+        font-family: 'Avenir', sans-serif, open;
         color: $brainflix-black;
         font-weight: 600;
         margin-top: 1rem;
@@ -355,7 +355,7 @@
 
     &__comment-para {
         font-size: .8125rem;
-        font-family: 'Avenir';
+        font-family: 'Avenir', sans-serif, open;
         color: $brainflix-black;
         font-weight: 500;
         line-height: 1.125rem;
@@ -372,7 +372,7 @@
 
     &__comment-timestamp {
         font-size: .8125rem;
-        font-family: 'Avenir';
+        font-family: 'Avenir', sans-serif, open;
         color: $silver;
         position: absolute;
         top: 0;
