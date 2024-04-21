@@ -1,3 +1,5 @@
+import { useState } from "react";
+import axios from "axios";
 import commentIcon from "../../assets/icons/add_comment.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import viewsIcon from "../../assets/icons/views.svg";
@@ -8,10 +10,11 @@ import '../../App.scss'
 
 const SelectedVideo = ({ video }) => {
     if (!video) {
-      return <div>Loading...</div>;
+        return <div>Loading...</div>;
     }
-  
+
     const { title, channel, views, timestamp, likes, description, comments } = video;
+
 
     return (
         <section className="selected-video">
@@ -65,7 +68,7 @@ const SelectedVideo = ({ video }) => {
                                     required
                                 ></textarea>
                             </div>
-                            <button className="selected-video__button">
+                            <button type="submit" className="selected-video__button">
                                 <img
                                     src={commentIcon}
                                     alt="comment icon"
@@ -95,5 +98,6 @@ const SelectedVideo = ({ video }) => {
         </section>
     );
 };
+
 
 export default SelectedVideo;

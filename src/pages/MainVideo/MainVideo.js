@@ -17,13 +17,13 @@ const MainVideoPage = () => {
 
         if (videoId) {
           const mainVideoResponse = await axios.get(
-            `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId}?api_key=f5a503e0-f571-43cd-9ec6-b29be74dce24`
+            `http://localhost:8080/videos/${videoId}`
           );
           setMainVideo(mainVideoResponse.data);
 
 
           const videoListResponse = await axios.get(
-            "https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=f5a503e0-f571-43cd-9ec6-b29be74dce24"
+            "http://localhost:8080/videos/"
           );
           const filteredVideoList = videoListResponse.data.filter(
             (video) => video.id !== videoId
@@ -32,13 +32,12 @@ const MainVideoPage = () => {
         } else {
 
           const defaultVideoResponse = await axios.get(
-            "https://unit-3-project-api-0a5620414506.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=f5a503e0-f571-43cd-9ec6-b29be74dce24"
+            "http://localhost:8080/videos/84e96018-4022-434e-80bf-000ce4cd12b8"
           );
           setMainVideo(defaultVideoResponse.data);
 
-
           const videoListResponse = await axios.get(
-            "https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=f5a503e0-f571-43cd-9ec6-b29be74dce24"
+            "http://localhost:8080/videos/"
           );
           const filteredVideoList = videoListResponse.data.filter(
             (video) => video.id !== defaultVideoResponse.data.id
